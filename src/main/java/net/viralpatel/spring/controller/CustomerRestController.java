@@ -65,7 +65,7 @@ public class CustomerRestController {
 		customer = customerDAO.update(id, customer);
 
 		if (null == customer) {
-			return new ResponseEntity("No Customer found for ID " + id, HttpStatus.NOT_FOUND);
+			return new ResponseEntity("No Customer found for ID: " + id, HttpStatus.NOT_FOUND);
 		}
 
 		return new ResponseEntity(customer, HttpStatus.OK);
